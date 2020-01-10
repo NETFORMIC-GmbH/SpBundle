@@ -150,7 +150,7 @@ class LightSamlSpListenerTest extends TestCase
      */
     private function getGetResponseEventMock()
     {
-        return $this->getMockBuilder(\Symfony\Component\HttpKernel\Event\GetResponseEvent::class)
+        return $this->getMockBuilder(\Symfony\Component\HttpKernel\Event\RequestEvent::class)
             ->disableOriginalConstructor()
             ->getMock();
     }
