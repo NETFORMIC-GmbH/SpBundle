@@ -6,6 +6,7 @@ use LightSaml\Context\Profile\ProfileContext;
 use LightSaml\Model\Protocol\Response;
 use LightSaml\SpBundle\Security\Authentication\Token\SamlSpToken;
 use LightSaml\SpBundle\Security\Firewall\LightSamlSpListener;
+use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Security\Core\User\User;
 
@@ -96,7 +97,7 @@ class LightSamlSpListenerTest extends TestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|\LightSaml\Context\Profile\ProfileContext
+     * @return MockObject|\LightSaml\Context\Profile\ProfileContext
      */
     private function getContextMock()
     {
@@ -106,7 +107,7 @@ class LightSamlSpListenerTest extends TestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|\LightSaml\Action\ActionInterface
+     * @return MockObject|\LightSaml\Action\ActionInterface
      */
     private function getActionMock()
     {
@@ -114,7 +115,7 @@ class LightSamlSpListenerTest extends TestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|\LightSaml\Builder\Profile\ProfileBuilderInterface
+     * @return \MockObject|\LightSaml\Builder\Profile\ProfileBuilderInterface
      */
     private function getProfileBuilderMock()
     {
@@ -122,7 +123,7 @@ class LightSamlSpListenerTest extends TestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|\Symfony\Component\HttpFoundation\Request
+     * @return MockObject|\Symfony\Component\HttpFoundation\Request
      */
     private function getRequestMock()
     {
@@ -130,7 +131,7 @@ class LightSamlSpListenerTest extends TestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|\Symfony\Component\HttpFoundation\Response
+     * @return MockObject|\Symfony\Component\HttpFoundation\Response
      */
     private function getResponseMock()
     {
@@ -138,7 +139,7 @@ class LightSamlSpListenerTest extends TestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|\Symfony\Component\HttpFoundation\Session\SessionInterface
+     * @return MockObject|\Symfony\Component\HttpFoundation\Session\SessionInterface
      */
     private function getSessionMock()
     {
@@ -146,7 +147,7 @@ class LightSamlSpListenerTest extends TestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|\Symfony\Component\HttpKernel\Event\GetResponseEvent
+     * @return MockObject|\Symfony\Component\HttpKernel\Event\RequestEvent
      */
     private function getGetResponseEventMock()
     {
@@ -156,7 +157,7 @@ class LightSamlSpListenerTest extends TestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|\Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface|\Symfony\Component\Security\Core\SecurityContextInterface
+     * @return MockObject|\Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface|\Symfony\Component\Security\Core\SecurityContextInterface
      */
     private function getTokenStorageMock()
     {
