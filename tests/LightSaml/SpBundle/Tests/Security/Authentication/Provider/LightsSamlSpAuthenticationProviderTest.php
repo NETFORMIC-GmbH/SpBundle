@@ -17,11 +17,12 @@ use LightSaml\SpBundle\Security\Authentication\Token\SamlSpTokenFactoryInterface
 use LightSaml\SpBundle\Security\User\AttributeMapperInterface;
 use LightSaml\SpBundle\Security\User\UserCreatorInterface;
 use LightSaml\SpBundle\Security\User\UsernameMapperInterface;
+use PHPUnit\Framework\TestCase;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
 use Symfony\Component\Security\Core\Role\Role;
 
-class LightsSamlSpAuthenticationProviderTest extends \PHPUnit_Framework_TestCase
+class LightsSamlSpAuthenticationProviderTest extends TestCase
 {
     public function test_constructs_with_provider_key()
     {

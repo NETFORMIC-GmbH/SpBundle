@@ -6,9 +6,10 @@ use LightSaml\Context\Profile\ProfileContext;
 use LightSaml\Model\Protocol\Response;
 use LightSaml\SpBundle\Security\Authentication\Token\SamlSpToken;
 use LightSaml\SpBundle\Security\Firewall\LightSamlSpListener;
+use PHPUnit\Framework\TestCase;
 use Symfony\Component\Security\Core\User\User;
 
-class LightSamlSpListenerTest extends \PHPUnit_Framework_TestCase
+class LightSamlSpListenerTest extends TestCase
 {
     public function test_constructs()
     {
