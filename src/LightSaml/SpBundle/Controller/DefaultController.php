@@ -16,6 +16,13 @@ use Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends AbstractController
 {
+    /** @var string */
+    private $discoveryRoute;
+
+    public function __construct(string $discoveryRoute) {
+        $this->discoveryRoute = $discoveryRoute;
+    }
+
     public function metadataAction()
     {
         $profile = $this->get('ligthsaml.profile.metadata');
@@ -44,7 +51,7 @@ class DefaultController extends AbstractController
     {
         $idpEntityId = $request->get('idp');
         if (null === $idpEntityId) {
-            return $this->redirect($this->generateUrl($this->container->getParameter('lightsaml_sp.route.discovery')));
+            return $this->redirect($this->generateUrl($this->discoveryRoute));
         }
 
         $profile = $this->get('ligthsaml.profile.login_factory')->get($idpEntityId);

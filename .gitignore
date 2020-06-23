@@ -10,5 +10,6 @@ vendor/*
 /phpda.json
 /phpda.svg
 /*.cache
+/var
 /tests/LightSaml/SpBundle/Tests/Functional/app/cache/*
 /tests/LightSaml/SpBundle/Tests/Functional/app/logs/*
